@@ -9,12 +9,8 @@ sudo apt-get update
 sudo apt-get upgrade
 
 # Install libraries
-sudo apt install gpsd gpsd-clients
+sudo apt install gpsd gpsd-clients ntp ufw python3-setuptools sshpass
 sudo apt install --fix-missing gpsd gpsd-clients
-sudo apt install ntp
-sudo apt install ufw
-sudo apt install python3-setuptools
-sudo apt install sshpass
 
 # Installing PIGPIO
 wget https://github.com/joan2937/pigpio/archive/master.zip
@@ -25,11 +21,11 @@ sudo make install
 cd
 
 # Edit config file to setup pps signal on gpio pin 18
-sudo echo "# the next three lines are for the GPS PPS signal" >> /boot/config.txt
-sudo echo "dtoverlay=pps-gpio,gpiopin=18" >> /boot/config.txt
-sudo echo "enable_uart=1" >> /boot/config.txt
-sudo echo "init_uart_baud=9600" >> /boot/config.txt
-sudo echo "pps-gpio" >> /etc/modules
+echo "# the next three lines are for the GPS PPS signal" | sudo tee --append /boot/config.txt
+echo "dtoverlay=pps-gpio,gpiopin=18" | sudo tee --append  /boot/config.txt
+echo "enable_uart=1" | sudo tee --append  /boot/config.txt
+echo "init_uart_baud=9600" | sudo tee --append  /boot/config.txt
+echo "pps-gpio" | sudo tee --append  /etc/modules
 
 # Making ULF directory and installing codes
 mkdir ULF
@@ -49,9 +45,6 @@ make
 mv pigs_output.txt ../
 sudo mv ntp.conf /etc/
 sudo mv rc.local /etc/
-
-# Authenticating MIRL server host
-sshpass -p "mirlmirl" mirl-ulf@132.177.207.87
 
 # Setup Firewall
 sudo ufw allow from 132.177.207.87
