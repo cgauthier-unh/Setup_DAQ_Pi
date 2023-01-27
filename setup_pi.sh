@@ -9,7 +9,7 @@ sudo apt-get update
 sudo apt-get upgrade
 
 # Install libraries
-sudo apt install gpsd gpsd-clients ntp ufw python3-setuptools sshpass
+sudo apt install gpsd gpsd-clients
 sudo apt install --fix-missing gpsd gpsd-clients
 sudo apt install ntp
 sudo apt install ufw
