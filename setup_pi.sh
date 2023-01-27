@@ -11,6 +11,10 @@ sudo apt-get upgrade
 # Install libraries
 sudo apt install gpsd gpsd-clients ntp ufw python3-setuptools sshpass
 sudo apt install --fix-missing gpsd gpsd-clients
+sudo apt install ntp
+sudo apt install ufw
+sudo apt install python3-setuptools
+sudo apt install sshpass
 
 # Installing PIGPIO
 wget https://github.com/joan2937/pigpio/archive/master.zip
