@@ -12,7 +12,7 @@ sudo apt-get upgrade
 mkdir ULF
 git clone https://github.com/cgauthier-unh/MIRL_HDMI
 mv MIRL_HDMI/* ULF/
-rm -r MIRL_ULF
+sudo rm -r MIRL_HDMI
 cd ULF
 sed -i "s/pi-unh-daq/pi-$1-daq/g" *
 sed -i "s/UNH/$2/g" *
