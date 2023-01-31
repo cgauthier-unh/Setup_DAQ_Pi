@@ -18,9 +18,9 @@ sed -i "s/pi-unh-hdmi/pi-$1-hdmi/g" *
 sed -i "s/pi-unh-hdmi/pi-$1-hdmi/g" *.py
 sed -i "s/UNH/$2/g" *
 sed -i "s/UNH/$2/g" *.py
-mv ULF-UNH-20220913_0000.txt ULF-$2-20220913_0000.txt
+
 mkdir Data_Files
-mv ULF*.txt Data_Files/
+mv ULF-UNH*.txt Data_Files/
 
 # Make shell scripts executable and compile main_acq
 chmod 755 *.sh
@@ -37,4 +37,4 @@ sudo apt-get install libatlas-base-dev
 
 echo "Testing Python Codes"
 
-python3 make_spec_and_time_xy.py pph ULF-$2-20220913_0000.txt
+python3 make_spec_and_time_xy.py pph ULF-UNH-20230105_0000.txt
