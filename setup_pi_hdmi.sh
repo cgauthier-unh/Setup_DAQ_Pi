@@ -8,6 +8,9 @@
 sudo apt-get update
 sudo apt-get upgrade
 
+# Install HDMI display tools
+git clone https://github.com/waveshare/LCD-show.git
+
 # Making ULF directory and installing codes
 mkdir ULF
 git clone https://github.com/cgauthier-unh/MIRL_HDMI
