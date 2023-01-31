@@ -8,9 +8,6 @@
 sudo apt-get update
 sudo apt-get upgrade
 
-# Install libraries
-
-
 # Making ULF directory and installing codes
 mkdir ULF
 git clone https://github.com/cgauthier-unh/MIRL_HDMI
