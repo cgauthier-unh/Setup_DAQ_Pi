@@ -23,5 +23,5 @@ chmod 755 *.sh
 make
 
 # Moving files from ULF to proper locations
-sudo mv rc.local /etc/
+# sudo mv rc.local /etc/
 
