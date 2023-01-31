@@ -37,4 +37,4 @@ sudo apt-get install libatlas-base-dev
 
 echo "Testing Python Codes"
 
-python3 make_spec_and_time_xy.py pph ULF-UNH-20230105_0000.txt
+python3 make_spec_and_time_xy.py pph ULF-UNH-20230105_2000.txt
