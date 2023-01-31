@@ -24,6 +24,9 @@ make
 sudo make install
 cd
 
+# Install HDMI display tools
+git clone https://github.com/waveshare/LCD-show.git
+
 # Edit config file to setup pps signal on gpio pin 18
 echo "# the next three lines are for the GPS PPS signal" | sudo tee --append /boot/config.txt
 echo "dtoverlay=pps-gpio,gpiopin=18" | sudo tee --append  /boot/config.txt
