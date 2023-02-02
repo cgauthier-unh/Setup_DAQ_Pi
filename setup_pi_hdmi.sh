@@ -33,7 +33,7 @@ make
 # sudo mv rc.local /etc/
 
 # Installing python libraries
-pip3 install matplotlib
+sudo apt-get install matplotlib
 pip3 install -U numpy
 sudo apt-get install libatlas-base-dev
 
