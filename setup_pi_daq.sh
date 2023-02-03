@@ -49,9 +49,7 @@ chmod 755 *.sh
 make
 
 # Moving files from ULF to proper locations
-mv pigs_output.txt ../
 sudo mv ntp.conf /etc/
-sudo mv rc.local /etc/
 
 # Setup Firewall
 sudo ufw allow from 132.177.207.87
