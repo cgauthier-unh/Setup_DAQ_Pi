@@ -8,7 +8,7 @@
 # Making ULF directory and installing codes
 git clone https://github.com/cgauthier-unh/MIRL_ULF
 mv MIRL_ULF/* ULF/
-rm -r MIRL_ULF
+sudo rm -r MIRL_ULF
 cd ULF
 sed -i "s/pi-unh-daq/pi-$1-daq/g" *
 sed -i "s/UNH/$2/g" *
