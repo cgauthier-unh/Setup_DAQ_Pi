@@ -11,7 +11,7 @@ sudo apt-get upgrade
 # Install libraries
 sudo apt install gpsd gpsd-clients
 sudo apt install --fix-missing gpsd gpsd-clients
-sudo apt install ntp
+sudo apt install ntp pps-tools
 sudo apt install ufw
 sudo apt install python3-setuptools
 sudo apt install sshpass
@@ -36,17 +36,15 @@ echo "pps-gpio" | sudo tee --append  /etc/modules
 
 # Making ULF directory and installing codes
 mkdir ULF
-git clone https://github.com/cgauthier-unh/MIRL_ULF
-mv MIRL_ULF/* ULF/
-sudo rm -r MIRL_ULF
 cd ULF
+scp mirl-ulf@mirl-ulf.unh.edu:'~/ULF/DAQ_ACQ_copy/*' ./
 sed -i "s/pi-unh-daq/pi-$1-daq/g" *
 sed -i "s/UNH/$2/g" *
 mkdir Data_Files
 
 # Make shell scripts executable and compile main_acq
-chmod 755 *.sh
-make
+sudo chmod 755 *.sh
+sudo make
 
 # Moving files from ULF to proper locations
 sudo mv ntp.conf /etc/
