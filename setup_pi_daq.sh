@@ -5,8 +5,8 @@
 # . setup_pi.sh lyr LYR
 
 # Update and upgrade system
-#sudo apt-get update
-#sudo apt-get upgrade
+sudo apt-get update
+sudo apt-get upgrade
 
 # Install libraries
 sudo apt install gpsd gpsd-clients
